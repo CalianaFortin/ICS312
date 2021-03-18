@@ -2,7 +2,7 @@
 ; Caliana Fortin
 ; ICS 312
 ; Professor Henri Casanova
-; Homework 5 - Exercise 2
+; Homework 5 - Exercise 3
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -528,7 +528,29 @@ WhenEqual25:
 	inc edx
 	cmp edx, 25
 	jle second
-	jg 	endProg
+	jg 	question3
+
+question3:
+	mov edx,0
+	mov ebx,0
+	mov ecx,0
+	mov eax, englishScore
+	call print_nl
+	call print_string 
+
+compareEnglish:
+mov bl, [sortedChars+edx]
+cmp bl, [proposedOrder+edx]
+je incrementScore
+jmp endProg
+
+incrementScore:
+inc ecx
+inc edx
+jmp compareEnglish
+
+
+
 
 endProg:
 	mov eax, ecx

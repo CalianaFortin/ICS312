@@ -60,10 +60,10 @@ L1:
 	call 	read_char
 
 	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-	; COMPARISON 1																		;
-	; - we must check to see if the char being read is a new line character 			;
-	; - To do this compare the char to 00Ah which is '\n' in hex 						;
-	; - if it is a new line exit L1 													;
+	; COMPARISON 1									    								;
+	; - we must check to see if the char being read is a new line character			    ;
+	; - To do this compare the char to 00Ah which is '\n' in hex 			 		  	;
+	; - if it is a new line exit L1                                                     ;
 	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	cmp al, 00Ah 	;We must check to see if the char is equal to 
 					;the new line character.
